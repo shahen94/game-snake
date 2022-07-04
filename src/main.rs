@@ -5,7 +5,7 @@ extern crate piston_window;
 extern crate rand;
 mod game;
 
-use game::core::{Game};
+use game::core::Game;
 
 fn main() {
     let (width, height) = (20, 20);

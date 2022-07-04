@@ -1,4 +1,3 @@
-use piston_window::types::Color;
 use piston_window::{Context, G2d};
 use std::collections::LinkedList;
 
@@ -67,14 +66,7 @@ impl Snake {
           None => ()
       };
 
-      let (last_x, last_y) = self.head_position();
-
-      let new_block = match self.direction {
-        Direction::Up => SnakeBlock { x: last_x, y: last_y - 1 },
-        Direction::Down => SnakeBlock { x: last_x, y: last_y + 1 },
-        Direction::Left => SnakeBlock { x: last_x - 1, y: last_y },
-        Direction::Right => SnakeBlock { x: last_x + 1, y: last_y },
-      };
+      let new_block = self.create_block_for(self.direction);
 
       self.body.push_front(new_block);
       let removed_block = self.body.pop_back().unwrap();

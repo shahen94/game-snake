@@ -1,10 +1,7 @@
-use std::thread;
-
-use piston_window::types::Color;
 use piston_window::*;
 
 use super::{
-    common::{BORDER_COLOR, FOOD_COLOR, MOVING_PERIOD, SNAKE_COLOR, GAMEOVER_COLOR, RESTART_TIME},
+    common::{BORDER_COLOR, FOOD_COLOR, MOVING_PERIOD, GAMEOVER_COLOR, RESTART_TIME},
     draw::{draw_block, draw_rectangle},
     snake::Direction,
 };
